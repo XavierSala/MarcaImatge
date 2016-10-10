@@ -1,4 +1,4 @@
-package net.xaviersala.Shooting;
+package net.xaviersala;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
