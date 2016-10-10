@@ -17,11 +17,6 @@ public class App extends GraphicsProgram
    private static final int AMPLADAPANTALLA = 1024;
    private static final int ALTURAPANTALLA = 768;
 
-    // Private Constructor per evitar que el crein
-    private App() {
-
-    }
-
     /**
      * Programa principal...
      */
