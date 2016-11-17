@@ -25,12 +25,20 @@ public class App extends GraphicsProgram
     public final void run() {
        setSize(AMPLADAPANTALLA, ALTURAPANTALLA);
        GImage imatge = new GImage("13c1.jpg");
-
        GRect rectangle = new GRect(0,0);
        add(rectangle);
-       add(imatge, (AMPLADAPANTALLA-imatge.getWidth())/2, (ALTURAPANTALLA-imatge.getHeight())/2);
+
+       GImage imatge2 = new GImage("13c1.jpg");
+       GRect rectangle2 = new GRect(0,0);
+       add(rectangle2);
+
+
+
+       add(imatge, (AMPLADAPANTALLA-imatge.getWidth())/4, (ALTURAPANTALLA-imatge.getHeight())/2);
+       add(imatge2, (AMPLADAPANTALLA-imatge.getWidth())/2, (ALTURAPANTALLA-imatge.getHeight())/2);
 
        Cara cara = new Cara(imatge, rectangle);
+       Cara cara2 = new Cara(imatge2, rectangle2);
     }
 
 
