@@ -1,6 +1,7 @@
 package net.xaviersala;
 
-import acm.graphics.GLabel;
+import acm.graphics.GImage;
+import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
 
 /**
@@ -14,8 +15,8 @@ public class App extends GraphicsProgram
     *
     */
    private static final long serialVersionUID = 1299094805237490891L;
-   private static final int AMPLADAPANTALLA = 1024;
-   private static final int ALTURAPANTALLA = 768;
+   private static final int AMPLADAPANTALLA = 400;
+   private static final int ALTURAPANTALLA = 400;
 
     /**
      * Programa principal...
@@ -23,24 +24,16 @@ public class App extends GraphicsProgram
     @Override
     public final void run() {
        setSize(AMPLADAPANTALLA, ALTURAPANTALLA);
+       GImage imatge = new GImage("13c1.jpg");
 
-       clicaPerComencar();
+       GRect rectangle = new GRect(0,0);
+       add(rectangle);
+       add(imatge, (AMPLADAPANTALLA-imatge.getWidth())/2, (ALTURAPANTALLA-imatge.getHeight())/2);
+
+       Cara cara = new Cara(imatge, rectangle);
     }
 
 
 
-
-
-/**
- * Clica per començar.
- */
-private void clicaPerComencar() {
-    GLabel label = new GLabel("Clica per començar");
-    double x = (getWidth() - label.getWidth()) / 2;
-    double y = (getHeight() + label.getAscent()) / 2;
-    add(label, x, y);
-    waitForClick();
-    remove(label);
-}
 
 }
